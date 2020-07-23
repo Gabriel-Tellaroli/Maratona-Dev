@@ -43,7 +43,7 @@ server.post("/", function(req, res){
         //Pegar dados do formulario
         const name = req.body.name
         const email = req.body.email
-        const blood = req.body.blood
+        const blood = req.body.blood.toUpperCase()
 
         if (name == "" || email == "" || blood == ""){
             return res.send("Todos os campos são obrigatórios.")
